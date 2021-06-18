@@ -2,6 +2,8 @@ require("dotenv").config();
 const express = require("express");
 const app = express();
 
+const router = express.Router();
+const cors = require("cors");
 const nodemailer = require("nodemailer");
 
 const PORT = process.env.PORT || 5000;
@@ -10,6 +12,7 @@ const PASSWORD = process.env.PASSWORD;
 // Middleware
 app.use(express.static("public"));
 app.use(express.json());
+app.use(cors());
 
 app.get('/', (req, res) => {
 	console.log("HELLO!!!!!!!")
@@ -22,17 +25,19 @@ app.post('/', (req, res) => {
 	const transporter = nodemailer.createTransport({
 		service: "gmail",
 		auth: {
-			user: "harrisonhemstreet@gmail.com",
-			pass: PASSWORD,
+			user: "workhemstreet@gmail.com",
+			pass: "fAk3P4s5W0Rd!#!#%",
 		}
 	});
 
 	const mailOptions = {
 		from: req.body.email,
-		to: "harrisonhemstreet@gmail.com",
+		to: "workhemstreet@gmail.com",
 		subject: `PORTFOLIO VIEW FROM ${req.body.email}: ${req.body.subject}`,
 		text: req.body.message,
 	}
+
+	console.log(mailOptions);
 
 	transporter.sendMail(mailOptions, (error, info) => {
 		if(error) {
