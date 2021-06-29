@@ -1,3 +1,8 @@
+const http = require("http");
+setInterval(function() {
+    http.get("http://harrisonhemstreet.herokuapp.com");
+}, 300000); // every 5 minutes (300000)
+
 const contactForm = document.querySelector(".contact-form");
 let name = document.getElementById("name");
 let email = document.getElementById("email");
