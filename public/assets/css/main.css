@@ -1437,7 +1437,7 @@ input, select, textarea {
 			#header .logo {
 				width: 4.75rem;
 				height: 4.75rem;
-				line-height: 4.75rem;
+				line-height: 5.75rem;
 			}
 
 				#header .logo .icon:before {
@@ -1653,3 +1653,8 @@ input, select, textarea {
 		body.is-preload #footer {
 			opacity: 0;
 		}
+/* _____________________ */
+
+.bigger-icon {
+	size: 10rem;
+}
