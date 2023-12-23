@@ -658,6 +658,11 @@ input, select, textarea {
 			display: block;
 		}
 
+		.image video {
+			border-radius: 4px;
+			display: block;
+		}
+
 		.image.left, .image.right {
 			max-width: 40%;
 		}
@@ -695,6 +700,10 @@ input, select, textarea {
 		}
 
 			.image.main img {
+				width: 100%;
+			}
+
+			.image.main video {
 				width: 100%;
 			}
 
@@ -1152,7 +1161,7 @@ input, select, textarea {
 			-webkit-transition: -webkit-transform 0.325s ease-in-out, -webkit-filter 0.325s ease-in-out;
 			-ms-transition: -ms-transform 0.325s ease-in-out, -ms-filter 0.325s ease-in-out;
 			transition: transform 0.325s ease-in-out, filter 0.325s ease-in-out;
-			background-image: url("../../images/bg.jpg");
+			background-image: url("https://i.imgur.com/6Dg67N8.jpg");
 			background-position: center;
 			background-size: cover;
 			background-repeat: no-repeat;
